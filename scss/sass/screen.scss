@@ -4,19 +4,9 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-
-$my_color: #BADA55;
-
-nav {
-  a{
-    color: $my_color;
-    &:hover {
-      color: darken($my_color, 10%);
-    }
-  }
-}
+@import "../scssFiles/main";
 
 .testicle{
 	color: purple;
-	font-size: 10px;
+	font-size: 50px;
 }
