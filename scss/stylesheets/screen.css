@@ -68,11 +68,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 1, ../sass/mainPage/_mainPage.scss */
-.testicle {
-  color: pink;
+.testClass {
+  color: purple;
 }
 /* line 4, ../sass/mainPage/_mainPage.scss */
-.testicle .testicle2 {
+.testClass .testClass2 {
   font-size: 40px;
-  color: gray;
+  color: black;
 }
