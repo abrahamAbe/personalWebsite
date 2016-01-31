@@ -67,56 +67,100 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 1, ../sass/mainPage/_mainPage.scss */
-.bodyStyle {
+/* line 1, ../sass/scssSheets/_main.scss */
+.mainBackground {
   background-color: #181818;
 }
-/* line 4, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent {
-  height: 1000px;
+
+/* line 5, ../sass/scssSheets/_main.scss */
+.mainContent {
   max-width: 1024px;
   margin: 0 auto !important;
   float: none !important;
   padding-top: 50px;
 }
 @media (max-width: 1050px) {
-  /* line 4, ../sass/mainPage/_mainPage.scss */
-  .bodyStyle .maiPageContent {
+  /* line 5, ../sass/scssSheets/_main.scss */
+  .mainContent {
     width: 100%;
     margin: none;
     padding: 0px 0px 0px 0px;
   }
 }
-/* line 18, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header {
+/* line 17, ../sass/scssSheets/_main.scss */
+.mainContent .header {
   border-bottom: 1px solid gray;
   padding-bottom: 20px;
   color: #999999;
 }
-/* line 23, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerContent {
+/* line 22, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerContent {
   display: inline-block;
   width: 49%;
 }
-/* line 28, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerLeft {
+/* line 27, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerLeft {
   padding-left: 7px;
 }
-/* line 31, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerLeft .headerName {
+/* line 30, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerLeft .headerName {
   font-size: 50px;
 }
-/* line 35, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerLeft .headerTitle {
+/* line 34, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerLeft .headerTitle {
   padding-top: 10px;
   font-size: 30px;
 }
-/* line 41, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerRight {
+/* line 40, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerRight {
+  text-align: right;
+  font-size: 15px;
+}
+/* line 45, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerRight .navigationContainer .navigationItem {
+  margin-left: 15px;
+}
+/* line 52, ../sass/scssSheets/_main.scss */
+.mainContent .aboutMe {
+  height: 400px;
+}
+/* line 56, ../sass/scssSheets/_main.scss */
+.mainContent .footer {
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  color: #999999;
+}
+/* line 61, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerContent {
+  display: inline-block;
+  width: 49%;
+}
+/* line 66, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerLeft {
+  font-size: 15px;
+}
+/* line 69, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerLeft .contact {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+/* line 75, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerRight {
   text-align: right;
   font-size: 25px;
 }
-/* line 45, ../sass/mainPage/_mainPage.scss */
-.bodyStyle .maiPageContent .header .headerRight .socialIcon {
+/* line 78, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerRight .socialIcon {
   margin-left: 15px;
+  color: #999999;
+}
+/* line 83, ../sass/scssSheets/_main.scss */
+.mainContent .footer .footerRight .socialIcon:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* line 1, ../sass/scssSheets/_portfolio.scss */
+.styleTest {
+  color: purple;
 }

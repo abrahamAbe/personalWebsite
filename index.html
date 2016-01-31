@@ -2,30 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Personal Website</title>
+        <base href="/">
+        <title>Abraham Preciado</title>
         <meta name="description" content="Welcome to my personal website.">
-        <meta name="Abraham Preciado" content="PersonalWebsite">
-
-        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <meta name="Abraham Preciado" content="Stuff about me.">
+        
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+        <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- SASS files -->
         <link rel="stylesheet" href="scss/stylesheets/screen.css">
         <link rel="stylesheet" href="scss/stylesheets/print.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+        <script>
+            System.config({
+                packages: {
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+            System.import('app/boot').then(null, console.error.bind(console));
+        </script>
     </head>
-
-    <body class="bodyStyle">
-        <div class="maiPageContent">
-            <div class="header">
-                <div class="headerContent headerLeft">
-                    <div class="headerName">Abraham Preciado</div>
-                    <div class="headerTitle">Front End Engineer</div>
-                </div>
-                <div class="headerContent headerRight">
-                    <i class="fa fa-facebook-square socialIcon"></i>
-                    <i class="fa fa-linkedin-square socialIcon"></i>
-                    <i class="fa fa-github-square socialIcon"></i>
-                </div>
-            </div> 
-        </div>
-    </body>
     
-</html>
+    <body class="mainBackground">
+        <main></main>
+    </body>

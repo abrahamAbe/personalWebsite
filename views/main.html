@@ -1,0 +1,32 @@
+<div class="mainContent">
+    <header class="header">
+        <div class="headerContent headerLeft">
+            <div class="headerName">Abraham Preciado</div>
+            <div class="headerTitle">Front End Engineer</div>
+        </div>
+        <div class="headerContent headerRight">
+            <div class="navigationContainer">
+                <a [routerLink]="['Route1']" class="navigationItem">ABOUT ME</a>
+                <a [routerLink]="['Route2', {id: 1}]" class="navigationItem">PROJECTS</a>
+                <a class="navigationItem">RESUME</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- rendering component's content -->
+    <router-outlet></router-outlet>
+    
+    <footer class="footer">
+        <div class="footerContent footerLeft">
+            <div class="contact">Contact</div>
+            <div>abraham.preciado@gmail.com</div>
+        </div>
+        <div class="footerContent footerRight">
+            <a href="https://www.facebook.com/abraham.preciadomorales" class="socialIcon"><i class="fa fa-facebook-square socialIcon"></i></a>
+            <a href="https://www.linkedin.com/in/abraham-preciado-89160787" class="socialIcon"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://github.com/abrahampreciado" class="socialIcon"><i class="fa fa-github-square"></i></a>
+            <a href="https://github.com/abrahampreciado" class="socialIcon"><i class="fa fa-envelope-square"></i></a>
+        </div>
+    </footer>
+</div>
+
