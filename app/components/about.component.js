@@ -9,26 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var FirstComponent;
+    var AboutComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            FirstComponent = (function () {
-                function FirstComponent() {
+            AboutComponent = (function () {
+                function AboutComponent() {
                 }
-                FirstComponent = __decorate([
+                AboutComponent = __decorate([
                     core_1.Component({
-                        template: "\n    <h3>First Component</h3>\n    <p>This is the content of FirstComponent</p>\n  "
+                        templateUrl: './views/about.html',
+                        styleUrls: ['./scss/sass/scssSheets/_about.scss']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], FirstComponent);
-                return FirstComponent;
+                ], AboutComponent);
+                return AboutComponent;
             })();
-            exports_1("FirstComponent", FirstComponent);
+            exports_1("AboutComponent", AboutComponent);
         }
     }
 });
-//# sourceMappingURL=first.component.js.map
+//# sourceMappingURL=about.component.js.map

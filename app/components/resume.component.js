@@ -9,27 +9,27 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var SecondComponent;
+    var ResumeComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            SecondComponent = (function () {
-                function SecondComponent() {
+            ResumeComponent = (function () {
+                function ResumeComponent() {
                 }
-                SecondComponent = __decorate([
+                ResumeComponent = __decorate([
                     core_1.Component({
-                        template: "\n    <h3>Second Component</h3>\n    <p class=\"styleTest\">This is the content of SecondComponent</p>\n    <p>Routing Parameter ID: {{id}}</p>\n  ",
-                        styleUrls: ['./scss/sass/scssSheets/_portfolio.scss']
+                        templateUrl: './views/resume.html',
+                        styleUrls: ['./scss/sass/scssSheets/_resume.scss']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], SecondComponent);
-                return SecondComponent;
+                ], ResumeComponent);
+                return ResumeComponent;
             })();
-            exports_1("SecondComponent", SecondComponent);
+            exports_1("ResumeComponent", ResumeComponent);
         }
     }
 });
-//# sourceMappingURL=second.component.js.map
+//# sourceMappingURL=resume.component.js.map

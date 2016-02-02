@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "scssSheets/about";
 @import "scssSheets/main";
-@import "scssSheets/portfolio"
-
-
+@import "scssSheets/mixins";
+@import "scssSheets/resume";

@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 .mainBackground{
     background-color: #181818;
 }
@@ -6,81 +8,125 @@
     max-width: 1024px;
     margin: 0 auto !important;
     float: none !important;
-    padding-top: 50px;
+    padding: 50px 10px 0px 10px;
     
-    @media (max-width: 1050px) {
+    @include large-screen{
         width: 100%;
-        margin: none;
-        padding: 0px 0px 0px 0px;
     }
     
+    @include medium-screen{
+        padding: 20px 10px 0px 10px !important;
+    } 
+    
     .header{
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid #999999;
         padding-bottom: 20px;
         color: #999999;
+        position: relative;
+        
+        @include medium-screen{
+            padding-bottom: 60px;
+        }
         
         .headerContent{
             display: inline-block;
-            width: 49%;  
+            
+            @include medium-screen{
+                display: block;
+                text-align: center !important;
+                width: 100% !important;
+            } 
         }
         
         .headerLeft{
-            padding-left: 7px;
+            width: 60%;
             
             .headerName{
-                font-size: 50px;
+                font-size: 40px;
             }
             
             .headerTitle{
                 padding-top: 10px;
-                font-size: 30px;  
+                font-size: 20px;  
             }   
         }
         
         .headerRight{
             text-align: right;
             font-size: 15px;
+            width: 39%;
+            position: absolute;
+            right: 0;
+            margin-top: 55px;
+            
+            @include medium-screen{
+                display: static;
+                margin-top: 0px;
+                padding-top: 20px;
+            }
             
             .navigationContainer{
                 .navigationItem{
                     margin-left: 15px;
-                }   
+                }
+                .navigationItemStyle{
+                    text-decoration: none;
+                    color: #999999;
+                }
+                .navigationItemStyle:hover{
+                    color: white;
+                    cursor: pointer;
+                }
             }
         } 
     }
     
-    .aboutMe{
-        height: 400px;   
-    }
-    
     .footer{
-        border-top: 1px solid gray;
-        padding-top: 20px;
+        border-top: 1px solid #999999;
+        padding-top: 30px;
+        padding-bottom: 50px;
         color: #999999;
+        position: relative;
+        
+        @include medium-screen{
+            padding-bottom: 70px;
+        }
         
         .footerContent{
             display: inline-block;
-            width: 49%;  
+            width: 49%;
+            
+            @include medium-screen{
+                display: block;
+                text-align: center !important;
+                width: 100% !important;
+            }  
         }
         
         .footerLeft{
-            font-size: 15px;
-            
-            .contact{
-                font-weight: bold;
-                padding-bottom: 5px;
-            }  
+            vertical-align: top;
+            font-size: 13px; 
         } 
         
         .footerRight{
             text-align: right;
             font-size: 25px;
-            .socialIcon{
-                margin-left: 15px;
-                color: #999999;
+            position: absolute;
+            right: 0;
+            
+            @include medium-screen{
+                padding-top: 15px;
             }
             
-            .socialIcon:hover{
+            .socialIcon{
+                margin-left: 15px;
+            }
+            
+            .socialIconStyle{
+               color: #999999; 
+            }
+            
+            .socialIconStyle:hover{
                 color: white;
                 cursor: pointer;
             }

@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './components/first.component', './components/second.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './components/about.component', './components/resume.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './components/first.compone
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, first_component_1, second_component_1;
+    var core_1, router_1, about_component_1, resume_component_1;
     var AppComponent;
     return {
         setters:[
@@ -18,11 +18,11 @@ System.register(['angular2/core', 'angular2/router', './components/first.compone
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (first_component_1_1) {
-                first_component_1 = first_component_1_1;
+            function (about_component_1_1) {
+                about_component_1 = about_component_1_1;
             },
-            function (second_component_1_1) {
-                second_component_1 = second_component_1_1;
+            function (resume_component_1_1) {
+                resume_component_1 = resume_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -31,13 +31,13 @@ System.register(['angular2/core', 'angular2/router', './components/first.compone
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'main',
-                        templateUrl: '../views/main.html',
-                        styleUrls: ['../scss/sass/scssSheets/_main.scss'],
+                        templateUrl: './views/main.html',
+                        styleUrls: ['./scss/sass/scssSheets/_main.scss'],
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }),
                     router_1.RouteConfig([
-                        { path: '/', component: first_component_1.FirstComponent, as: 'Route1' },
-                        { path: '/route2/:id', component: second_component_1.SecondComponent, as: 'Route2' }
+                        { path: '/', component: about_component_1.AboutComponent, as: 'About' },
+                        { path: '/resume', component: resume_component_1.ResumeComponent, as: 'Resume' }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
