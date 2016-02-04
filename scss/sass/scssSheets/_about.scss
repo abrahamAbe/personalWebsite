@@ -1,3 +1,41 @@
-.styleTest1{
-    color: purple;
+@import "_mixins.scss";
+
+.aboutMeContent{
+    width: 720px;
+    margin: auto;
+    text-align: center;
+    color: #999999;
+    font-size: 17px;
+    line-height: 22px;
+    
+    @include medium-screen{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100% !important;
+    }
+    
+    .aboutMeTextContent{
+        text-align: left;
+        margin-bottom: 15px;
+        
+        .linkStyle{
+            text-decoration: none !important;
+            
+            color: white !important;
+        }
+    }
+    
+    .aboutMeImgContainer{
+        padding-top: 50px;
+        margin-bottom: 10px;
+        
+        .aboutMeImg{
+            height: 450px; 
+            width: 400px;
+            
+            @include medium-screen{
+                width: 100% !important;
+            }
+        }
+    }
 }

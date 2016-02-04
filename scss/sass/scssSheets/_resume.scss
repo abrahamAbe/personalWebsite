@@ -1,12 +1,12 @@
 .resumeContainer{
-    padding-top: 47px;
-    padding-bottom: 61px;
     max-width: 800px;
     margin: auto;
+    padding: 0px 0px 0px 80px;
     
     @include medium-screen{
         width: 100%;
         margin: none;
+        padding: 47px 0px 61px 0px !important;
     }
     
     .resumeSection{
@@ -27,6 +27,7 @@
             
             @include medium-screen{
                 padding-top: 5px;
+                padding-left: 0px;
             }
             
             .resumeContent{
@@ -50,6 +51,11 @@
                 .descriptionContent{
                     margin-bottom: 7px;
                     line-height: 18px;
+                    padding-right: 30px;
+                    
+                    @include medium-screen{
+                        padding-right: 0px !important;
+                    }
                 }
             }
             .contactSectionLeft{
@@ -64,8 +70,8 @@
                 width: 23%;
             }
             .resumeSectionRight{
-                width: 76%;
                 padding-top: 3px;
+                width: 76%;
                 
                 @include medium-screen{
                     padding-top: 10px;
@@ -83,7 +89,24 @@
         }
     }
     
+    .languagesSection{
+        padding-top: 50px;
+    }
+    
     .contactSection{
         padding-bottom: 43px;
+    }
+    
+    .skillsSection{
+        margin-top: 5px;
+        display: inline-block;
+        
+        @include medium-screen{
+            margin-top: 13px !important;
+        }
+        
+        .SkillsContent{
+            margin-bottom: 5px;
+        }
     }  
 }
