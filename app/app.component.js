@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './components/about.component', './components/resume.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './components/about.component', './components/resume.component', './components/projects.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, about_component_1, resume_component_1;
+    var core_1, router_1, about_component_1, resume_component_1, projects_component_1;
     var AppComponent;
     return {
         setters:[
@@ -23,11 +23,32 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
             },
             function (resume_component_1_1) {
                 resume_component_1 = resume_component_1_1;
+            },
+            function (projects_component_1_1) {
+                projects_component_1 = projects_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent() {
+                function AppComponent(location) {
+                    this.currentId = 1;
+                    //location.go('/');
+                    console.log(location.path());
+                    if (location.path() == '/resume') {
+                        this.currentId = 2;
+                    }
+                    else if (location.path() == '/projects') {
+                        this.currentId = 3;
+                    }
+                    else {
+                        this.currentId = 1;
+                    }
                 }
+                AppComponent.prototype.onSelect = function (id) {
+                    this.currentId = id;
+                };
+                AppComponent.prototype.isSelected = function (id) {
+                    return id == this.currentId;
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'main',
@@ -37,9 +58,10 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
                     }),
                     router_1.RouteConfig([
                         { path: '/', component: about_component_1.AboutComponent, as: 'About' },
-                        { path: '/resume', component: resume_component_1.ResumeComponent, as: 'Resume' }
+                        { path: '/resume', component: resume_component_1.ResumeComponent, as: 'Resume' },
+                        { path: '/projects', component: projects_component_1.ProjectsComponent, as: 'Projects' }
                     ]), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [router_1.Location])
                 ], AppComponent);
                 return AppComponent;
             })();

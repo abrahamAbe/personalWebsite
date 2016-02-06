@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 720px;
   margin: auto;
   text-align: center;
-  color: #999999;
+  color: #666666;
   font-size: 17px;
   line-height: 22px;
 }
@@ -92,31 +92,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 21, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeTextContent .linkStyle {
   text-decoration: none !important;
-  color: white !important;
+  color: black !important;
 }
-/* line 28, ../sass/scssSheets/_about.scss */
+/* line 27, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeImgContainer {
   padding-top: 50px;
   margin-bottom: 10px;
 }
-/* line 32, ../sass/scssSheets/_about.scss */
+/* line 31, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeImgContainer .aboutMeImg {
   height: 450px;
   width: 400px;
 }
 @media screen and (max-width: 768px) {
-  /* line 32, ../sass/scssSheets/_about.scss */
+  /* line 31, ../sass/scssSheets/_about.scss */
   .aboutMeContent .aboutMeImgContainer .aboutMeImg {
     width: 100% !important;
   }
 }
 
 /* line 3, ../sass/scssSheets/_main.scss */
-.mainBackground {
-  background-color: #181818;
+.selected {
+  color: black !important;
 }
 
 /* line 7, ../sass/scssSheets/_main.scss */
+.mainBackground {
+  background-color: white;
+}
+
+/* line 11, ../sass/scssSheets/_main.scss */
 .mainContent {
   max-width: 1024px;
   margin: 0 auto !important;
@@ -124,58 +129,59 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 50px 10px 0px 10px;
 }
 @media screen and (max-width: 1025px) {
-  /* line 7, ../sass/scssSheets/_main.scss */
+  /* line 11, ../sass/scssSheets/_main.scss */
   .mainContent {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 7, ../sass/scssSheets/_main.scss */
+  /* line 11, ../sass/scssSheets/_main.scss */
   .mainContent {
     padding: 20px 10px 0px 10px !important;
   }
 }
-/* line 21, ../sass/scssSheets/_main.scss */
+/* line 25, ../sass/scssSheets/_main.scss */
 .mainContent .header {
   border-bottom: 1px solid #999999;
   padding-bottom: 20px;
-  color: #999999;
+  color: black;
   position: relative;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 768px) {
-  /* line 21, ../sass/scssSheets/_main.scss */
+  /* line 25, ../sass/scssSheets/_main.scss */
   .mainContent .header {
     padding-bottom: 60px;
     margin-bottom: 0px;
   }
 }
-/* line 33, ../sass/scssSheets/_main.scss */
+/* line 37, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerContent {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  /* line 33, ../sass/scssSheets/_main.scss */
+  /* line 37, ../sass/scssSheets/_main.scss */
   .mainContent .header .headerContent {
     display: block;
     text-align: center !important;
     width: 100% !important;
   }
 }
-/* line 43, ../sass/scssSheets/_main.scss */
+/* line 47, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft {
   width: 60%;
 }
-/* line 46, ../sass/scssSheets/_main.scss */
+/* line 50, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft .headerName {
   font-size: 40px;
 }
-/* line 50, ../sass/scssSheets/_main.scss */
+/* line 54, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft .headerTitle {
   padding-top: 10px;
   font-size: 20px;
+  color: #666666;
 }
-/* line 56, ../sass/scssSheets/_main.scss */
+/* line 61, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight {
   text-align: right;
   font-size: 15px;
@@ -185,62 +191,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 55px;
 }
 @media screen and (max-width: 768px) {
-  /* line 56, ../sass/scssSheets/_main.scss */
+  /* line 61, ../sass/scssSheets/_main.scss */
   .mainContent .header .headerRight {
     display: static;
     margin-top: 0px;
     padding-top: 20px;
   }
 }
-/* line 71, ../sass/scssSheets/_main.scss */
+/* line 75, ../sass/scssSheets/_main.scss */
+.mainContent .header .headerRight .navigationContainer {
+  font-size: 17px;
+}
+/* line 78, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItem {
   margin-left: 15px;
 }
-/* line 74, ../sass/scssSheets/_main.scss */
+/* line 81, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItemStyle {
   text-decoration: none;
   color: #999999;
 }
-/* line 78, ../sass/scssSheets/_main.scss */
+/* line 85, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItemStyle:hover {
-  color: white;
+  color: black;
   cursor: pointer;
 }
-/* line 86, ../sass/scssSheets/_main.scss */
+/* line 93, ../sass/scssSheets/_main.scss */
 .mainContent .footer {
   border-top: 1px solid #999999;
   padding-top: 30px;
   padding-bottom: 50px;
-  color: #999999;
+  color: #666666;
   position: relative;
   margin-top: 50px;
 }
 @media screen and (max-width: 768px) {
-  /* line 86, ../sass/scssSheets/_main.scss */
+  /* line 93, ../sass/scssSheets/_main.scss */
   .mainContent .footer {
     padding-bottom: 70px;
     margin-top: 0px;
   }
 }
-/* line 99, ../sass/scssSheets/_main.scss */
+/* line 106, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerContent {
   display: inline-block;
   width: 49%;
 }
 @media screen and (max-width: 768px) {
-  /* line 99, ../sass/scssSheets/_main.scss */
+  /* line 106, ../sass/scssSheets/_main.scss */
   .mainContent .footer .footerContent {
     display: block;
     text-align: center !important;
     width: 100% !important;
   }
 }
-/* line 110, ../sass/scssSheets/_main.scss */
+/* line 117, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerLeft {
   vertical-align: top;
   font-size: 13px;
 }
-/* line 115, ../sass/scssSheets/_main.scss */
+/* line 122, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerRight {
   text-align: right;
   font-size: 25px;
@@ -248,22 +258,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 115, ../sass/scssSheets/_main.scss */
+  /* line 122, ../sass/scssSheets/_main.scss */
   .mainContent .footer .footerRight {
     padding-top: 15px;
   }
 }
-/* line 125, ../sass/scssSheets/_main.scss */
+/* line 132, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerRight .socialIcon {
   margin-left: 15px;
 }
-/* line 129, ../sass/scssSheets/_main.scss */
+/* line 136, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerRight .socialIconStyle {
   color: #999999;
 }
-/* line 133, ../sass/scssSheets/_main.scss */
+/* line 140, ../sass/scssSheets/_main.scss */
 .mainContent .footer .footerRight .socialIconStyle:hover {
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -285,7 +295,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .resumeContainer .resumeSection .resumeSectionTitle {
   font-size: 22px;
   font-weight: bold;
-  color: white;
+  color: black;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -297,7 +307,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 24, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent {
   padding-left: 5px;
-  color: #999999;
+  color: #666666;
 }
 @media screen and (max-width: 768px) {
   /* line 24, ../sass/scssSheets/_resume.scss */
@@ -327,7 +337,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent .whiteBoldText {
   font-weight: bold;
   margin-bottom: 3px;
-  color: white;
+  color: black;
 }
 /* line 51, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent .descriptionContent {
@@ -398,4 +408,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 108, ../sass/scssSheets/_resume.scss */
 .resumeContainer .skillsSection .SkillsContent {
   margin-bottom: 5px;
+}
+
+/* line 1, ../sass/scssSheets/_projects.scss */
+.projectsContent {
+  color: pink;
 }

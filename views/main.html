@@ -6,9 +6,9 @@
         </div>
         <div class="headerContent headerRight">
             <div class="navigationContainer">
-                <a [routerLink]="['About']" class="navigationItemStyle">ABOUT ME</a>
-                <a [routerLink]="['Resume']" class="navigationItem navigationItemStyle">RESUME</a>
-                <a class="navigationItem navigationItemStyle">PROJECTS</a>
+                <a [routerLink]="['About']" [class.selected]="isSelected(1)" (click)="onSelect(1)" class="navigationItemStyle">About me</a>
+                <a [routerLink]="['Resume']" [class.selected]="isSelected(2)" (click)="onSelect(2)" class="navigationItem navigationItemStyle">Resume</a>
+                <a [routerLink]="['Projects']" [class.selected]="isSelected(3)" (click)="onSelect(3)" class="navigationItem navigationItemStyle">Projects</a>
             </div>
         </div>
     </header>
