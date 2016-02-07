@@ -1,7 +1,7 @@
 @import "_mixins.scss";
 
 .aboutMeContent{
-    width: 720px;
+    width: 730px;
     margin: auto;
     text-align: center;
     color: #666666;
@@ -20,6 +20,7 @@
         
         .linkStyle{
             text-decoration: none !important;
+            font-weight: bold;
             color: black !important;
         }
     }

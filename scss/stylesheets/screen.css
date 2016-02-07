@@ -69,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 3, ../sass/scssSheets/_about.scss */
 .aboutMeContent {
-  width: 720px;
+  width: 730px;
   margin: auto;
   text-align: center;
   color: #666666;
@@ -92,20 +92,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 21, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeTextContent .linkStyle {
   text-decoration: none !important;
+  font-weight: bold;
   color: black !important;
 }
-/* line 27, ../sass/scssSheets/_about.scss */
+/* line 28, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeImgContainer {
   padding-top: 50px;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/scssSheets/_about.scss */
+/* line 32, ../sass/scssSheets/_about.scss */
 .aboutMeContent .aboutMeImgContainer .aboutMeImg {
   height: 450px;
   width: 400px;
 }
 @media screen and (max-width: 768px) {
-  /* line 31, ../sass/scssSheets/_about.scss */
+  /* line 32, ../sass/scssSheets/_about.scss */
   .aboutMeContent .aboutMeImgContainer .aboutMeImg {
     width: 100% !important;
   }
@@ -412,5 +413,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 1, ../sass/scssSheets/_projects.scss */
 .projectsContent {
-  color: pink;
+  color: black;
+}
+/* line 4, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectContent {
+  display: none;
+  height: 500px;
+}
+/* line 9, ../sass/scssSheets/_projects.scss */
+.projectsContent .visible {
+  display: block;
+}
+/* line 13, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+/* line 18, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectImg {
+  height: 170px;
+  width: 170px;
+}
+/* line 23, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectName {
+  color: black;
+  font-weight: bold;
+  padding-top: 12px;
 }

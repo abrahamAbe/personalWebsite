@@ -18,7 +18,14 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             ProjectsComponent = (function () {
                 function ProjectsComponent() {
+                    this.currentId = 1;
                 }
+                ProjectsComponent.prototype.onClick = function (id) {
+                    this.currentId = id;
+                };
+                ProjectsComponent.prototype.isVisible = function (id) {
+                    return id == this.currentId;
+                };
                 ProjectsComponent = __decorate([
                     core_1.Component({
                         templateUrl: './views/projects.html',

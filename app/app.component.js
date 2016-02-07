@@ -31,8 +31,6 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
             AppComponent = (function () {
                 function AppComponent(location) {
                     this.currentId = 1;
-                    //location.go('/');
-                    console.log(location.path());
                     if (location.path() == '/resume') {
                         this.currentId = 2;
                     }
@@ -45,6 +43,7 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
                 }
                 AppComponent.prototype.onSelect = function (id) {
                     this.currentId = id;
+                    $("projects").click();
                 };
                 AppComponent.prototype.isSelected = function (id) {
                     return id == this.currentId;

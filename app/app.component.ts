@@ -18,10 +18,12 @@ import {ProjectsComponent} from './components/projects.component';
   {path:'/projects', component: ProjectsComponent, as:'Projects'}
 ])
 export class AppComponent{
+    
     currentId: number = 1;
 
     onSelect(id) {
         this.currentId = id;
+        $("projects").click();
     }
     
     isSelected(id){
@@ -29,8 +31,6 @@ export class AppComponent{
     }
     
     constructor(location: Location) {
-        //location.go('/');
-        console.log(location.path());
         if(location.path() == '/resume'){
             this.currentId = 2;
         }

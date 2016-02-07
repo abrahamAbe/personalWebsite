@@ -1,1 +1,15 @@
-<div class="projectsContent">PROJECTS</div>
+<div class="projectsContent">
+    <!-- project description -->
+    <div [class.visible]="isVisible(1)" class="projectContent" id="1">ucmdb</div>
+    <div [class.visible]="isVisible(2)" class="projectContent" id="2">landesk</div>
+    
+    <!-- project name & img -->
+    <div (click)="onClick(1)" class="projectSection">
+        <img src="./assets/projectImages/ucmdb.jpg" alt="uCMDB" class="projectImg">
+        <div class="projectName">uCMDB</div>
+    </div>
+    <div (click)="onClick(2)" class="projectSection">
+        <img src="./assets/projectImages/landesk.jpeg" alt="Landesk" class="projectImg">
+        <div class="projectName">Landesk</div>
+    </div>
+</div>
