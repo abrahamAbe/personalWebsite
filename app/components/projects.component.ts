@@ -5,16 +5,4 @@ declare var jQuery:any;
   templateUrl: './views/projects.html',
   styleUrls: ['./scss/sass/scssSheets/_projects.scss']
 })
-export class ProjectsComponent {
-    
-    currentId: number = 1;
-    
-    onClick(id) {
-        this.currentId = id;
-        
-    }
-    
-    isVisible(id){
-        return id == this.currentId;   
-    }
-}
+export class ProjectsComponent {}

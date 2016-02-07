@@ -2,6 +2,10 @@
   @media screen and (max-width: 768px){ @content }
 }
 
+@mixin project-screen{
+  @media screen and (max-width: 838px){ @content }
+}
+
 @mixin large-screen{
   @media screen and (max-width: 1025px){ @content }
 }

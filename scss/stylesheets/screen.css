@@ -411,33 +411,78 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 5px;
 }
 
-/* line 1, ../sass/scssSheets/_projects.scss */
+/* line 3, ../sass/scssSheets/_projects.scss */
 .projectsContent {
   color: black;
 }
-/* line 4, ../sass/scssSheets/_projects.scss */
-.projectsContent .projectContent {
-  display: none;
-  height: 500px;
+@media screen and (max-width: 768px) {
+  /* line 3, ../sass/scssSheets/_projects.scss */
+  .projectsContent {
+    padding-bottom: 20px;
+  }
 }
-/* line 9, ../sass/scssSheets/_projects.scss */
-.projectsContent .visible {
-  display: block;
-}
-/* line 13, ../sass/scssSheets/_projects.scss */
+/* line 10, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection {
   display: inline-block;
   width: 33%;
   text-align: center;
+  padding-bottom: 40px;
 }
-/* line 18, ../sass/scssSheets/_projects.scss */
+@media screen and (max-width: 838px) {
+  /* line 10, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectSection {
+    padding-top: 50px;
+    display: block;
+    width: 100%;
+  }
+}
+/* line 22, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectImg {
   height: 170px;
   width: 170px;
 }
-/* line 23, ../sass/scssSheets/_projects.scss */
+@media screen and (max-width: 768px) {
+  /* line 22, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectSection .projectImg {
+    height: 200px;
+    width: 100%;
+  }
+}
+/* line 32, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectName {
   color: black;
   font-weight: bold;
   padding-top: 12px;
+  text-decoration: none;
+}
+/* line 38, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectName .appLinkStyle {
+  color: black !important;
+  text-decoration: none !important;
+}
+/* line 43, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectName .appLinkStyle:hover {
+  cursor: pointer;
+}
+/* line 48, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectDescription {
+  width: 65%;
+  margin: auto;
+  padding-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  /* line 48, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectSection .projectDescription {
+    width: 100%;
+  }
+}
+/* line 57, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectDescription .descriptionLink {
+  font-weight: bold;
+  text-decoration: none;
+  color: black !important;
+}
+/* line 62, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectSection .projectDescription .descriptionLink:hover {
+  cursor: pointer;
 }

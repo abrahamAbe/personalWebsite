@@ -23,7 +23,6 @@ export class AppComponent{
 
     onSelect(id) {
         this.currentId = id;
-        $("projects").click();
     }
     
     isSelected(id){

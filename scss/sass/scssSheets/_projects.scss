@@ -1,29 +1,67 @@
+@import "_mixins.scss";
+
 .projectsContent{
     color: black;
     
-    .projectContent{
-        display: none;
-        height: 500px;
-    }
-    
-    .visible{
-        display: block;
+    @include medium-screen{
+        padding-bottom: 20px;
     }
     
     .projectSection{
         display: inline-block;
         width: 33%;
         text-align: center;
+        padding-bottom: 40px;
+        
+        @include project-screen{
+            padding-top: 50px;
+            display: block;
+            width: 100%;
+        }
         
         .projectImg{
             height: 170px;
             width: 170px;
+            
+            @include medium-screen{
+                height: 200px;
+                width: 100%;
+            }
         }
         
         .projectName{
             color: black;
             font-weight: bold;
             padding-top: 12px;
+            text-decoration: none;
+            
+            .appLinkStyle{
+               color: black !important;
+               text-decoration: none !important; 
+            }
+            
+            .appLinkStyle:hover{
+                cursor: pointer;
+            } 
+        }
+        
+        .projectDescription{
+            width: 65%;
+            margin: auto;
+            padding-top: 5px;
+            
+            @include medium-screen{
+                width: 100%;
+            }
+            
+            .descriptionLink{
+                font-weight: bold;
+                text-decoration: none;
+                color: black !important;
+            }
+            .descriptionLink:hover{
+                cursor: pointer;
+            }
         }   
     }
 }
