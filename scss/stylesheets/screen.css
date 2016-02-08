@@ -444,7 +444,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media screen and (max-width: 768px) {
   /* line 22, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectImg {
-    height: 200px;
+    height: 220px;
     width: 100%;
   }
 }
