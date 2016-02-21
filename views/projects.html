@@ -1,23 +1,15 @@
 <div class="projectsContent">
-    <!-- project name & img -->
-    <div class="projectSection">
-        <img src="./assets/projectImages/events.png" alt="Events.com" class="projectImg">
-        <div class="projectName"><a href="https://events.com/" class="appLinkStyle">Events.com</a></div>
-        <div class="projectDescription">An event ticketing/registration application built with AngularJS.</div>
+    <div class="projectsContentWrapper" id="projectsContentWrapper" [hidden]="projectsContentWrapperVisible()">
+        <div [hidden]="currentProjectDescription != 0">events</div>
+        <div [hidden]="currentProjectDescription != 1">landesk</div>
+        <div [hidden]="currentProjectDescription != 2">uCMDB</div>
+        <div [hidden]="currentProjectDescription != 3">my creep score</div>        
     </div>
-    <div class="projectSection">
-        <img src="./assets/projectImages/landesk.jpeg" alt="Landesk" class="projectImg">
-        <div class="projectName"><a href="http://www.landesk.com/index.aspx" class="appLinkStyle">Landesk</a></div>
-        <div class="projectDescription">A mobile security application that manages smart devices.</div>
-    </div>
-    <div class="projectSection">
-        <img src="./assets/projectImages/ucmdb.jpg" alt="uCMDB" class="projectImg">
-        <div class="projectName"><a href="http://www8.hp.com/us/en/software-solutions/configuration-management-system-database/" class="appLinkStyle">uCMDB</a></div>
-        <div class="projectDescription">An application used for the automatic discovery of IT infrastructure components.</div>
-    </div>
-    <div class="projectSection">
-        <img src="./assets/projectImages/mycreepscore.png" alt="uCMDB" class="projectImg">
-        <div class="projectName">My Creep Score</div>
-        <div class="projectDescription">An application that provides game statistics to League of Legends players. Built using <a href="https://developer.riotgames.com/" class="descriptionLink">Riot Games API</a> as the data source.</div>
+    <div *ngFor="#project of projects; #i = index" class="projectSection" id="{{i}}" (click)="displayProjectDescription(i)">
+        <img src="{{getImgPath(project.imgName)}}" alt="{{project.name}}" class="projectImg" id="img">
+        <div class="projectName">{{project.name}}</div>
+        <div class="projectDescription">{{project.description}}</div>    
     </div>
 </div>
+
+

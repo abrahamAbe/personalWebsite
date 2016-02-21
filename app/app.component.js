@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './components/about.component', './components/resume.component', './components/projects.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './dataService/data.service', './components/about.component', './components/resume.component', './components/projects.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, about_component_1, resume_component_1, projects_component_1;
+    var core_1, router_1, data_service_1, about_component_1, resume_component_1, projects_component_1;
     var AppComponent;
     return {
         setters:[
@@ -17,6 +17,9 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (data_service_1_1) {
+                data_service_1 = data_service_1_1;
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
@@ -29,8 +32,10 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(location) {
+                function AppComponent(_dataService, location) {
+                    this._dataService = _dataService;
                     this.currentId = 1;
+                    //hacking location status so page refresh doesn't break the app
                     if (location.path() == '/resume') {
                         this.currentId = 2;
                     }
@@ -52,14 +57,15 @@ System.register(['angular2/core', 'angular2/router', './components/about.compone
                         selector: 'main',
                         templateUrl: './views/main.html',
                         styleUrls: ['./scss/sass/scssSheets/_main.scss'],
-                        directives: [router_1.ROUTER_DIRECTIVES]
+                        directives: [router_1.ROUTER_DIRECTIVES],
+                        providers: [data_service_1.DataService]
                     }),
                     router_1.RouteConfig([
                         { path: '/', component: about_component_1.AboutComponent, as: 'About' },
                         { path: '/resume', component: resume_component_1.ResumeComponent, as: 'Resume' },
                         { path: '/projects', component: projects_component_1.ProjectsComponent, as: 'Projects' }
                     ]), 
-                    __metadata('design:paramtypes', [router_1.Location])
+                    __metadata('design:paramtypes', [data_service_1.DataService, router_1.Location])
                 ], AppComponent);
                 return AppComponent;
             })();
