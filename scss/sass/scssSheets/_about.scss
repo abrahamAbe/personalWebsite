@@ -5,10 +5,10 @@
     margin: auto;
     text-align: center;
     color: #666666;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 22px;
     
-    @include medium-screen{
+    @include small-screen{
         padding-top: 50px;
         padding-bottom: 50px;
         width: 100% !important;
@@ -33,7 +33,15 @@
             height: 450px; 
             width: 400px;
             
-            @include medium-screen{
+            /*@include small-screen{
+                width: 0% !important;
+            }*/
+            
+            @include s-small-screen{
+                width: 70% !important;
+            }
+            
+            @include x-small-screen{
                 width: 100% !important;
             }
         }

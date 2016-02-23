@@ -34,23 +34,23 @@ System.register(['angular2/core', 'angular2/router', './dataService/data.service
             AppComponent = (function () {
                 function AppComponent(_dataService, location) {
                     this._dataService = _dataService;
-                    this.currentId = 1;
+                    this.currentNavigationId = 1;
                     //hacking location status so page refresh doesn't break the app
                     if (location.path() == '/resume') {
-                        this.currentId = 2;
+                        this.currentNavigationId = 2;
                     }
                     else if (location.path() == '/projects') {
-                        this.currentId = 3;
+                        this.currentNavigationId = 3;
                     }
                     else {
-                        this.currentId = 1;
+                        this.currentNavigationId = 1;
                     }
                 }
                 AppComponent.prototype.onSelect = function (id) {
-                    this.currentId = id;
+                    this.currentNavigationId = id;
                 };
                 AppComponent.prototype.isSelected = function (id) {
-                    return id == this.currentId;
+                    return id == this.currentNavigationId;
                 };
                 AppComponent = __decorate([
                     core_1.Component({

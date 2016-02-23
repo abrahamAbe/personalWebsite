@@ -10,15 +10,18 @@
     
 .mainContent{
     max-width: 1024px;
+    min-height: 700px;
     margin: 0 auto !important;
     float: none !important;
     padding: 50px 10px 0px 10px;
+    font-family: Tahoma;
+    font-style: normal;
     
     @include large-screen{
         width: 100%;
     }
     
-    @include medium-screen{
+    @include small-screen{
         padding: 20px 10px 0px 10px !important;
     } 
     
@@ -29,7 +32,7 @@
         position: relative;
         margin-bottom: 50px;
         
-        @include medium-screen{
+        @include small-screen{
             padding-bottom: 60px;
             margin-bottom: 0px;
         }
@@ -37,7 +40,7 @@
         .headerContent{
             display: inline-block;
             
-            @include medium-screen{
+            @include small-screen{
                 display: block;
                 text-align: center !important;
                 width: 100% !important;
@@ -48,7 +51,7 @@
             width: 60%;
             
             .headerName{
-                font-size: 40px;
+                font-size: 37px;
             }
             
             .headerTitle{
@@ -64,9 +67,9 @@
             width: 39%;
             position: absolute;
             right: 0;
-            margin-top: 55px;
+            margin-top: 50px;
             
-            @include medium-screen{
+            @include small-screen{
                 display: static;
                 margin-top: 0px;
                 padding-top: 20px;
@@ -89,25 +92,38 @@
             }
         } 
     }
+}
+
+.footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    position: relative;
+    margin-top: 50px;
+    background-color: gray;
+    font-family: Tahoma;
     
-    .footer{
-        border-top: 1px solid #999999;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        color: #666666;
+    @include small-screen{
+        margin-top: 0px !important;
+        padding: 40px 0px 70px 0px !important;
+    }
+    
+    .responsiveFooter{
+        max-width: 1024px !important;
+        margin: 0 auto !important;
         position: relative;
-        margin-top: 50px;
+        padding: 0px 10px 0px 10px !important;
         
-        @include medium-screen{
-            padding-bottom: 70px;
-            margin-top: 0px;
+        @include small-screen{
+            width: 100%;
+            padding: 0px 0px 0px 0px !important;
         }
         
         .footerContent{
             display: inline-block;
             width: 49%;
             
-            @include medium-screen{
+            @include small-screen{
                 display: block;
                 text-align: center !important;
                 width: 100% !important;
@@ -116,7 +132,7 @@
         
         .footerLeft{
             vertical-align: top;
-            font-size: 13px; 
+            font-size: 12px; 
         } 
         
         .footerRight{
@@ -124,9 +140,13 @@
             font-size: 25px;
             position: absolute;
             right: 0;
+            padding-right: 10px !important;
+            margin-top: -5px;
             
-            @include medium-screen{
+            @include small-screen{
                 padding-top: 15px;
+                padding-right: 0px !important;
+                margin-top: 0px;
             }
             
             .socialIcon{
@@ -134,7 +154,7 @@
             }
             
             .socialIconStyle{
-               color: #999999; 
+                color: white; 
             }
             
             .socialIconStyle:hover{

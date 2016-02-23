@@ -1,12 +1,18 @@
 import {Component, OnInit} from 'angular2/core';
 import {NgFor} from 'angular2/angular2';
+import {NgClass} from 'angular2/common';
 import {DataService} from '../dataService/data.service';
 import {Project} from '../dataService/project';
 import {ComponentStatus} from '../dataService/componentStatus';
+import {EventsComponent} from '../components/events.component';
+import {LandeskComponent} from '../components/landesk.component';
+import {UcmdbComponent} from '../components/ucmdb.component';
+import {MyCreepScoreComponent} from '../components/mycreepscore.component';
 
 @Component({
   templateUrl: './views/projects.html',
-  styleUrls: ['./scss/sass/scssSheets/_projects.scss']
+  styleUrls: ['./scss/sass/scssSheets/_projects.scss'],
+  directives: [EventsComponent, LandeskComponent, UcmdbComponent, MyCreepScoreComponent]
 })
 export class ProjectsComponent implements OnInit {
     projects: Project[];
@@ -28,7 +34,7 @@ export class ProjectsComponent implements OnInit {
         if(self.initializedProjectSections == false){
             
             setTimeout(function() {
-                for(var i = 0; i < 4; i ++){
+                for(var i = 0; i < self.projects.length; i ++){
                     var clickableProject = document.getElementById(i);
                     clickableProject.click();   
                 }

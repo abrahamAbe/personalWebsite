@@ -3,7 +3,7 @@
     margin: auto;
     padding: 0px 0px 0px 80px;
     
-    @include medium-screen{
+    @include small-screen{
         width: 100%;
         margin: none;
         padding: 47px 0px 61px 0px !important;
@@ -12,20 +12,21 @@
     .resumeSection{
         
         .resumeSectionTitle{
-            font-size: 22px;
+            font-size: 21px;
             font-weight: bold;
             color: black;
             margin-bottom: 20px;
             
-            @include medium-screen{
+            @include small-screen{
                 margin-bottom: 10px;
             }   
         }
         .resumeSectionContent{
             padding-left: 5px;
             color: #666666;
+            font-size: 15px;
             
-            @include medium-screen{
+            @include small-screen{
                 padding-top: 5px;
                 padding-left: 0px;
             }
@@ -33,7 +34,7 @@
             .resumeContent{
                 display: inline-block;
                 
-                @include medium-screen{
+                @include small-screen{
                     display: block;
                     margin-top: 10px;
                     width: 100% !important;
@@ -53,16 +54,16 @@
                     line-height: 18px;
                     padding-right: 30px;
                     
-                    @include medium-screen{
+                    @include small-screen{
                         padding-right: 0px !important;
                     }
                 }
             }
             .contactSectionLeft{
-                width: 49%;
+                width: 50%;
             }
             .contactSectionRight{
-                width: 49%
+                width: 48%
             }
             .resumeSectionLeft{
                 padding-top: 3px;
@@ -73,7 +74,7 @@
                 padding-top: 3px;
                 width: 76%;
                 
-                @include medium-screen{
+                @include small-screen{
                     padding-top: 10px;
                 }
             }     
@@ -84,7 +85,7 @@
     }
     
     .bottomSection{
-        @include medium-screen{
+        @include small-screen{
             padding-top: 10px;
         }
     }
@@ -100,8 +101,9 @@
     .skillsSection{
         margin-top: 5px;
         display: inline-block;
+        vertical-align: top;
         
-        @include medium-screen{
+        @include small-screen{
             margin-top: 13px !important;
         }
         

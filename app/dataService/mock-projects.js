@@ -21,7 +21,7 @@ System.register([], function(exports_1) {
                 },
                 {
                     name: 'My Creep Score',
-                    description: 'An application that provides game statistics to League of Legends players. Built using Riot Games API as the data source.',
+                    description: 'An application that provides game statistics to League of Legends players.',
                     imgName: 'mycreepscore.png'
                 }
             ]);

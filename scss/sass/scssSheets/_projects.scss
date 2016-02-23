@@ -1,16 +1,93 @@
 @import "_mixins.scss";
 
+.visible{
+    display: block;
+}
+
 .projectsContent{
     color: black;
     
-    @include medium-screen{
+    @include small-screen{
         padding-bottom: 20px;
     }
     
     .projectsContentWrapper{
-        height: 600px;
         width: 100%;
-        padding-top: 20px;
+        margin-bottom: 60px;
+        //padding: 0px 95px 0px 95px;
+        display: none;
+        
+        @include medium-screen{
+            margin-bottom: 0px;
+        }
+        
+        @include small-screen{
+            padding: 40px 0px 0px 0px;
+        }
+        
+        .projectDescriptionTitle{
+            margin-bottom: 30px;
+            
+            .appLinkStyle{
+               font-weight: bold;
+               color: black !important;
+               text-decoration: none !important; 
+            }
+            
+            .appLinkStyle:hover{
+                cursor: pointer;
+            }
+        }
+        
+        .descriptionImgContainer{
+            display: inline-block;
+            height: 500px;
+            width: 49%;
+            
+            @include x-small-screen{
+                width: 100%; 
+            }
+            
+            img{
+                height: 100%;
+                width: 100%;
+                
+                @include medium-screen{
+                    //height: 220px;
+                    width: 80%;
+                }
+                
+                @include x-small-screen{
+                    width: 100%; 
+                }
+            }
+        }
+        
+        .projectDescriptionContent{
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 20px;
+            width: 49%;
+            
+            @include medium-screen{
+                padding-left: 0px;
+                width: 80%;
+                margin: auto;
+                margin-top: 40px;
+            }
+            
+            @include small-screen{
+                width: 100%;
+            }
+        }
+        
+        .responsiveBlocks{
+            @include medium-screen{
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+        }
     }
     
     .projectSection{
@@ -19,8 +96,9 @@
         text-align: center;
         padding-bottom: 40px;
         vertical-align: top;
+        cursor: pointer;
         
-        @include project-screen{
+        @include medium-screen{
             padding-top: 50px;
             display: block;
             width: 100%;
@@ -32,7 +110,11 @@
             
             @include medium-screen{
                 height: 220px;
-                width: 100%;
+                width: 50%;
+            }
+            
+            @include x-small-screen{
+                width: 100%; 
             }
         }
         
@@ -41,23 +123,17 @@
             font-weight: bold;
             padding-top: 12px;
             text-decoration: none;
-            
-            /*.appLinkStyle{
-               color: black !important;
-               text-decoration: none !important; 
-            }
-            
-            .appLinkStyle:hover{
-                cursor: pointer;
-            }*/ 
         }
         
         .projectDescription{
             width: 65%;
             margin: auto;
             padding-top: 5px;
+            line-height: 18px;
+            font-size: 15px;
+            color: #666666;
             
-            @include medium-screen{
+            @include small-screen{
                 width: 100%;
             }
             

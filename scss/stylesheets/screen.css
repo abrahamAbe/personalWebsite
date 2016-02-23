@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: auto;
   text-align: center;
   color: #666666;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 22px;
 }
 @media screen and (max-width: 768px) {
@@ -104,12 +104,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .aboutMeContent .aboutMeImgContainer .aboutMeImg {
   height: 450px;
   width: 400px;
+  /*@include small-screen{
+      width: 0% !important;
+  }*/
 }
 @media screen and (max-width: 768px) {
   /* line 32, ../sass/scssSheets/_about.scss */
   .aboutMeContent .aboutMeImgContainer .aboutMeImg {
+    width: 70% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 32, ../sass/scssSheets/_about.scss */
+  .aboutMeContent .aboutMeImgContainer .aboutMeImg {
     width: 100% !important;
   }
+}
+
+/* line 1, ../sass/scssSheets/_landesk.scss */
+.landeskContent {
+  color: purple;
 }
 
 /* line 3, ../sass/scssSheets/_main.scss */
@@ -125,9 +139,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 11, ../sass/scssSheets/_main.scss */
 .mainContent {
   max-width: 1024px;
+  min-height: 700px;
   margin: 0 auto !important;
   float: none !important;
   padding: 50px 10px 0px 10px;
+  font-family: Tahoma;
+  font-style: normal;
 }
 @media screen and (max-width: 1025px) {
   /* line 11, ../sass/scssSheets/_main.scss */
@@ -141,7 +158,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 20px 10px 0px 10px !important;
   }
 }
-/* line 25, ../sass/scssSheets/_main.scss */
+/* line 28, ../sass/scssSheets/_main.scss */
 .mainContent .header {
   border-bottom: 1px solid #999999;
   padding-bottom: 20px;
@@ -150,130 +167,150 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 50px;
 }
 @media screen and (max-width: 768px) {
-  /* line 25, ../sass/scssSheets/_main.scss */
+  /* line 28, ../sass/scssSheets/_main.scss */
   .mainContent .header {
     padding-bottom: 60px;
     margin-bottom: 0px;
   }
 }
-/* line 37, ../sass/scssSheets/_main.scss */
+/* line 40, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerContent {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  /* line 37, ../sass/scssSheets/_main.scss */
+  /* line 40, ../sass/scssSheets/_main.scss */
   .mainContent .header .headerContent {
     display: block;
     text-align: center !important;
     width: 100% !important;
   }
 }
-/* line 47, ../sass/scssSheets/_main.scss */
+/* line 50, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft {
   width: 60%;
 }
-/* line 50, ../sass/scssSheets/_main.scss */
+/* line 53, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft .headerName {
-  font-size: 40px;
+  font-size: 37px;
 }
-/* line 54, ../sass/scssSheets/_main.scss */
+/* line 57, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerLeft .headerTitle {
   padding-top: 10px;
   font-size: 20px;
   color: #666666;
 }
-/* line 61, ../sass/scssSheets/_main.scss */
+/* line 64, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight {
   text-align: right;
   font-size: 15px;
   width: 39%;
   position: absolute;
   right: 0;
-  margin-top: 55px;
+  margin-top: 50px;
 }
 @media screen and (max-width: 768px) {
-  /* line 61, ../sass/scssSheets/_main.scss */
+  /* line 64, ../sass/scssSheets/_main.scss */
   .mainContent .header .headerRight {
     display: static;
     margin-top: 0px;
     padding-top: 20px;
   }
 }
-/* line 75, ../sass/scssSheets/_main.scss */
+/* line 78, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer {
   font-size: 17px;
 }
-/* line 78, ../sass/scssSheets/_main.scss */
+/* line 81, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItem {
   margin-left: 15px;
 }
-/* line 81, ../sass/scssSheets/_main.scss */
+/* line 84, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItemStyle {
   text-decoration: none;
   color: #999999;
 }
-/* line 85, ../sass/scssSheets/_main.scss */
+/* line 88, ../sass/scssSheets/_main.scss */
 .mainContent .header .headerRight .navigationContainer .navigationItemStyle:hover {
   color: black;
   cursor: pointer;
 }
-/* line 93, ../sass/scssSheets/_main.scss */
-.mainContent .footer {
-  border-top: 1px solid #999999;
-  padding-top: 30px;
+
+/* line 97, ../sass/scssSheets/_main.scss */
+.footer {
+  padding-top: 50px;
   padding-bottom: 50px;
-  color: #666666;
+  color: white;
   position: relative;
   margin-top: 50px;
+  background-color: gray;
+  font-family: Tahoma;
 }
 @media screen and (max-width: 768px) {
-  /* line 93, ../sass/scssSheets/_main.scss */
-  .mainContent .footer {
-    padding-bottom: 70px;
-    margin-top: 0px;
+  /* line 97, ../sass/scssSheets/_main.scss */
+  .footer {
+    margin-top: 0px !important;
+    padding: 40px 0px 70px 0px !important;
   }
 }
-/* line 106, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerContent {
+/* line 111, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter {
+  max-width: 1024px !important;
+  margin: 0 auto !important;
+  position: relative;
+  padding: 0px 10px 0px 10px !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 111, ../sass/scssSheets/_main.scss */
+  .footer .responsiveFooter {
+    width: 100%;
+    padding: 0px 0px 0px 0px !important;
+  }
+}
+/* line 122, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerContent {
   display: inline-block;
   width: 49%;
 }
 @media screen and (max-width: 768px) {
-  /* line 106, ../sass/scssSheets/_main.scss */
-  .mainContent .footer .footerContent {
+  /* line 122, ../sass/scssSheets/_main.scss */
+  .footer .responsiveFooter .footerContent {
     display: block;
     text-align: center !important;
     width: 100% !important;
   }
 }
-/* line 117, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerLeft {
+/* line 133, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerLeft {
   vertical-align: top;
-  font-size: 13px;
+  font-size: 12px;
 }
-/* line 122, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerRight {
+/* line 138, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerRight {
   text-align: right;
   font-size: 25px;
   position: absolute;
   right: 0;
+  padding-right: 10px !important;
+  margin-top: -5px;
 }
 @media screen and (max-width: 768px) {
-  /* line 122, ../sass/scssSheets/_main.scss */
-  .mainContent .footer .footerRight {
+  /* line 138, ../sass/scssSheets/_main.scss */
+  .footer .responsiveFooter .footerRight {
     padding-top: 15px;
+    padding-right: 0px !important;
+    margin-top: 0px;
   }
 }
-/* line 132, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerRight .socialIcon {
+/* line 152, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerRight .socialIcon {
   margin-left: 15px;
 }
-/* line 136, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerRight .socialIconStyle {
-  color: #999999;
+/* line 156, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerRight .socialIconStyle {
+  color: white;
 }
-/* line 140, ../sass/scssSheets/_main.scss */
-.mainContent .footer .footerRight .socialIconStyle:hover {
+/* line 160, ../sass/scssSheets/_main.scss */
+.footer .responsiveFooter .footerRight .socialIconStyle:hover {
   color: black;
   cursor: pointer;
 }
@@ -294,7 +331,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 14, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionTitle {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: bold;
   color: black;
   margin-bottom: 20px;
@@ -309,6 +346,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .resumeContainer .resumeSection .resumeSectionContent {
   padding-left: 5px;
   color: #666666;
+  font-size: 15px;
 }
 @media screen and (max-width: 768px) {
   /* line 24, ../sass/scssSheets/_resume.scss */
@@ -317,178 +355,271 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 0px;
   }
 }
-/* line 33, ../sass/scssSheets/_resume.scss */
+/* line 34, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  /* line 33, ../sass/scssSheets/_resume.scss */
+  /* line 34, ../sass/scssSheets/_resume.scss */
   .resumeContainer .resumeSection .resumeSectionContent .resumeContent {
     display: block;
     margin-top: 10px;
     width: 100% !important;
   }
 }
-/* line 42, ../sass/scssSheets/_resume.scss */
+/* line 43, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent .boldText {
   font-weight: bold;
   margin-bottom: 3px;
 }
-/* line 46, ../sass/scssSheets/_resume.scss */
+/* line 47, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent .whiteBoldText {
   font-weight: bold;
   margin-bottom: 3px;
   color: black;
 }
-/* line 51, ../sass/scssSheets/_resume.scss */
+/* line 52, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeContent .descriptionContent {
   margin-bottom: 7px;
   line-height: 18px;
   padding-right: 30px;
 }
 @media screen and (max-width: 768px) {
-  /* line 51, ../sass/scssSheets/_resume.scss */
+  /* line 52, ../sass/scssSheets/_resume.scss */
   .resumeContainer .resumeSection .resumeSectionContent .resumeContent .descriptionContent {
     padding-right: 0px !important;
   }
 }
-/* line 61, ../sass/scssSheets/_resume.scss */
+/* line 62, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .contactSectionLeft {
-  width: 49%;
+  width: 50%;
 }
-/* line 64, ../sass/scssSheets/_resume.scss */
+/* line 65, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .contactSectionRight {
-  width: 49%;
+  width: 48%;
 }
-/* line 67, ../sass/scssSheets/_resume.scss */
+/* line 68, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeSectionLeft {
   padding-top: 3px;
   vertical-align: top;
   width: 23%;
 }
-/* line 72, ../sass/scssSheets/_resume.scss */
+/* line 73, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeSectionContent .resumeSectionRight {
   padding-top: 3px;
   width: 76%;
 }
 @media screen and (max-width: 768px) {
-  /* line 72, ../sass/scssSheets/_resume.scss */
+  /* line 73, ../sass/scssSheets/_resume.scss */
   .resumeContainer .resumeSection .resumeSectionContent .resumeSectionRight {
     padding-top: 10px;
   }
 }
-/* line 81, ../sass/scssSheets/_resume.scss */
+/* line 82, ../sass/scssSheets/_resume.scss */
 .resumeContainer .resumeSection .resumeExperienceSection {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
-  /* line 86, ../sass/scssSheets/_resume.scss */
+  /* line 87, ../sass/scssSheets/_resume.scss */
   .resumeContainer .bottomSection {
     padding-top: 10px;
   }
 }
-/* line 92, ../sass/scssSheets/_resume.scss */
+/* line 93, ../sass/scssSheets/_resume.scss */
 .resumeContainer .languagesSection {
   padding-top: 50px;
 }
-/* line 96, ../sass/scssSheets/_resume.scss */
+/* line 97, ../sass/scssSheets/_resume.scss */
 .resumeContainer .contactSection {
   padding-bottom: 43px;
 }
-/* line 100, ../sass/scssSheets/_resume.scss */
+/* line 101, ../sass/scssSheets/_resume.scss */
 .resumeContainer .skillsSection {
   margin-top: 5px;
   display: inline-block;
+  vertical-align: top;
 }
 @media screen and (max-width: 768px) {
-  /* line 100, ../sass/scssSheets/_resume.scss */
+  /* line 101, ../sass/scssSheets/_resume.scss */
   .resumeContainer .skillsSection {
     margin-top: 13px !important;
   }
 }
-/* line 108, ../sass/scssSheets/_resume.scss */
+/* line 110, ../sass/scssSheets/_resume.scss */
 .resumeContainer .skillsSection .SkillsContent {
   margin-bottom: 5px;
 }
 
 /* line 3, ../sass/scssSheets/_projects.scss */
+.visible {
+  display: block;
+}
+
+/* line 7, ../sass/scssSheets/_projects.scss */
 .projectsContent {
   color: black;
 }
 @media screen and (max-width: 768px) {
-  /* line 3, ../sass/scssSheets/_projects.scss */
+  /* line 7, ../sass/scssSheets/_projects.scss */
   .projectsContent {
     padding-bottom: 20px;
   }
 }
-/* line 10, ../sass/scssSheets/_projects.scss */
+/* line 14, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper {
-  height: 600px;
   width: 100%;
-  padding-top: 20px;
+  margin-bottom: 60px;
+  display: none;
 }
-/* line 16, ../sass/scssSheets/_projects.scss */
+@media screen and (max-width: 838px) {
+  /* line 14, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper {
+    padding: 40px 0px 0px 0px;
+  }
+}
+/* line 28, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .projectDescriptionTitle {
+  margin-bottom: 30px;
+}
+/* line 31, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .projectDescriptionTitle .appLinkStyle {
+  font-weight: bold;
+  color: black !important;
+  text-decoration: none !important;
+}
+/* line 37, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .projectDescriptionTitle .appLinkStyle:hover {
+  cursor: pointer;
+}
+/* line 42, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .descriptionImgContainer {
+  display: inline-block;
+  height: 500px;
+  width: 49%;
+}
+@media screen and (max-width: 500px) {
+  /* line 42, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .descriptionImgContainer {
+    width: 100%;
+  }
+}
+/* line 51, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .descriptionImgContainer img {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 838px) {
+  /* line 51, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .descriptionImgContainer img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 51, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .descriptionImgContainer img {
+    width: 100%;
+  }
+}
+/* line 66, ../sass/scssSheets/_projects.scss */
+.projectsContent .projectsContentWrapper .projectDescriptionContent {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
+  width: 49%;
+}
+@media screen and (max-width: 838px) {
+  /* line 66, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .projectDescriptionContent {
+    padding-left: 0px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 66, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .projectDescriptionContent {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 838px) {
+  /* line 84, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectsContentWrapper .responsiveBlocks {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+/* line 93, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection {
   display: inline-block;
   width: 33%;
   text-align: center;
   padding-bottom: 40px;
   vertical-align: top;
+  cursor: pointer;
 }
 @media screen and (max-width: 838px) {
-  /* line 16, ../sass/scssSheets/_projects.scss */
+  /* line 93, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection {
     padding-top: 50px;
     display: block;
     width: 100%;
   }
 }
-/* line 29, ../sass/scssSheets/_projects.scss */
+/* line 107, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectImg {
   height: 170px;
   width: 170px;
 }
-@media screen and (max-width: 768px) {
-  /* line 29, ../sass/scssSheets/_projects.scss */
+@media screen and (max-width: 838px) {
+  /* line 107, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectImg {
     height: 220px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 107, ../sass/scssSheets/_projects.scss */
+  .projectsContent .projectSection .projectImg {
     width: 100%;
   }
 }
-/* line 39, ../sass/scssSheets/_projects.scss */
+/* line 121, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectName {
   color: black;
   font-weight: bold;
   padding-top: 12px;
   text-decoration: none;
-  /*.appLinkStyle{
-     color: black !important;
-     text-decoration: none !important; 
-  }
-  
-  .appLinkStyle:hover{
-      cursor: pointer;
-  }*/
 }
-/* line 55, ../sass/scssSheets/_projects.scss */
+/* line 128, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription {
   width: 65%;
   margin: auto;
   padding-top: 5px;
+  line-height: 18px;
+  font-size: 15px;
+  color: #666666;
 }
 @media screen and (max-width: 768px) {
-  /* line 55, ../sass/scssSheets/_projects.scss */
+  /* line 128, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectDescription {
     width: 100%;
   }
 }
-/* line 64, ../sass/scssSheets/_projects.scss */
+/* line 140, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription .descriptionLink {
   font-weight: bold;
   text-decoration: none;
   color: black !important;
 }
-/* line 69, ../sass/scssSheets/_projects.scss */
+/* line 145, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription .descriptionLink:hover {
   cursor: pointer;
 }

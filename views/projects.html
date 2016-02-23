@@ -1,12 +1,12 @@
 <div class="projectsContent">
-    <div class="projectsContentWrapper" id="projectsContentWrapper" [hidden]="projectsContentWrapperVisible()">
-        <div [hidden]="currentProjectDescription != 0">events</div>
-        <div [hidden]="currentProjectDescription != 1">landesk</div>
-        <div [hidden]="currentProjectDescription != 2">uCMDB</div>
-        <div [hidden]="currentProjectDescription != 3">my creep score</div>        
+    <div class="projectsContentWrapper" id="projectsContentWrapper" [ngClass]="{visible: !projectsContentWrapperVisible()}" [hidden]="projectsContentWrapperVisible()">
+        <div [hidden]="currentProjectDescription != 0"><events></events></div>
+        <div [hidden]="currentProjectDescription != 1"><landesk></landesk></div>
+        <div [hidden]="currentProjectDescription != 2"><ucmdb></ucmdb></div>
+        <div [hidden]="currentProjectDescription != 3"><my-creep-score></my-creep-score></div>        
     </div>
     <div *ngFor="#project of projects; #i = index" class="projectSection" id="{{i}}" (click)="displayProjectDescription(i)">
-        <img src="{{getImgPath(project.imgName)}}" alt="{{project.name}}" class="projectImg" id="img">
+        <img src="{{getImgPath(project.imgName)}}" alt="{{project.name}}" class="projectImg">
         <div class="projectName">{{project.name}}</div>
         <div class="projectDescription">{{project.description}}</div>    
     </div>

@@ -22,27 +22,27 @@ import {ProjectsComponent} from './components/projects.component';
 
 export class AppComponent{
     
-    currentId: number = 1;
+    currentNavigationId: number = 1;
     
     onSelect(id) {
-        this.currentId = id;
+        this.currentNavigationId = id;
     }
     
     isSelected(id){
-        return id == this.currentId;   
+        return id == this.currentNavigationId;   
     }
     
     constructor(private _dataService: DataService, location: Location) {
         
         //hacking location status so page refresh doesn't break the app
         if(location.path() == '/resume'){
-            this.currentId = 2;
+            this.currentNavigationId = 2;
         }
         else if(location.path() == '/projects'){
-            this.currentId = 3; 
+            this.currentNavigationId = 3; 
         }
         else{
-            this.currentId = 1;
+            this.currentNavigationId = 1;
         }            
     }
 }
