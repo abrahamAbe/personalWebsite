@@ -4,7 +4,7 @@
     width: 730px;
     margin: auto;
     text-align: center;
-    color: #666666;
+    color: $textGray;
     font-size: 15px;
     line-height: 22px;
     
@@ -21,7 +21,7 @@
         .linkStyle{
             text-decoration: none !important;
             font-weight: bold;
-            color: black !important;
+            color: $textBlack !important;
         }
     }
     
@@ -33,11 +33,7 @@
             height: 450px; 
             width: 400px;
             
-            /*@include small-screen{
-                width: 0% !important;
-            }*/
-            
-            @include s-small-screen{
+            @include small-screen{
                 width: 70% !important;
             }
             

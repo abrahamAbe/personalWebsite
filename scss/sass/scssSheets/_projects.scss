@@ -5,16 +5,25 @@
 }
 
 .projectsContent{
-    color: black;
+    color: $textBlack;
     
     @include small-screen{
         padding-bottom: 20px;
     }
     
+    .appLinkStyle{
+        font-weight: bold;
+        color: $textBlack !important;
+        text-decoration: none !important; 
+    }
+    
+    .appLinkStyle:hover{
+        cursor: pointer;
+    }
+    
     .projectsContentWrapper{
         width: 100%;
         margin-bottom: 60px;
-        //padding: 0px 95px 0px 95px;
         display: none;
         
         @include medium-screen{
@@ -27,16 +36,6 @@
         
         .projectDescriptionTitle{
             margin-bottom: 30px;
-            
-            .appLinkStyle{
-               font-weight: bold;
-               color: black !important;
-               text-decoration: none !important; 
-            }
-            
-            .appLinkStyle:hover{
-                cursor: pointer;
-            }
         }
         
         .descriptionImgContainer{
@@ -53,7 +52,6 @@
                 width: 100%;
                 
                 @include medium-screen{
-                    //height: 220px;
                     width: 80%;
                 }
                 
@@ -64,20 +62,29 @@
         }
         
         .projectDescriptionContent{
-            display: inline-block;
             vertical-align: top;
             padding-left: 20px;
             width: 49%;
+            float: right;
+            color: $textGray;
+            font-size: 15px;
             
             @include medium-screen{
+                display: block;
                 padding-left: 0px;
                 width: 80%;
                 margin: auto;
                 margin-top: 40px;
+                margin-bottom: 40px;
             }
             
             @include small-screen{
                 width: 100%;
+            }
+            
+            .projectDescriptionParagraph{
+                line-height: 19px;
+                text-align: left;
             }
         }
         
@@ -98,8 +105,12 @@
         vertical-align: top;
         cursor: pointer;
         
+        @media(max-width: 845px){
+            margin-top: 50px;   
+        }
+        
         @include medium-screen{
-            padding-top: 50px;
+            margin-bottom: 40px;
             display: block;
             width: 100%;
         }
@@ -119,7 +130,7 @@
         }
         
         .projectName{
-            color: black;
+            color: $textBlack;
             font-weight: bold;
             padding-top: 12px;
             text-decoration: none;
@@ -131,7 +142,7 @@
             padding-top: 5px;
             line-height: 18px;
             font-size: 15px;
-            color: #666666;
+            color: $textGray;
             
             @include small-screen{
                 width: 100%;
@@ -140,7 +151,7 @@
             .descriptionLink{
                 font-weight: bold;
                 text-decoration: none;
-                color: black !important;
+                color: $textBlack !important;
             }
             .descriptionLink:hover{
                 cursor: pointer;

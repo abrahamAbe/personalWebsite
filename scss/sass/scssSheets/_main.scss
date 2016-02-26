@@ -1,11 +1,11 @@
 @import "_mixins.scss";
 
 .selected{
-    color: black !important;
+    color: $textBlack !important;
 }
 
 .mainBackground{
-    background-color: white;
+    background-color: $white;
 }
     
 .mainContent{
@@ -26,9 +26,9 @@
     } 
     
     .header{
-        border-bottom: 1px solid #999999;
+        border-bottom: 1px solid $borderGray;
         padding-bottom: 20px;
-        color: black;
+        color: $textBlack;
         position: relative;
         margin-bottom: 50px;
         
@@ -57,7 +57,7 @@
             .headerTitle{
                 padding-top: 10px;
                 font-size: 20px;
-                color: #666666;  
+                color: $textGray;  
             }   
         }
         
@@ -83,10 +83,10 @@
                 }
                 .navigationItemStyle{
                     text-decoration: none;
-                    color: #999999;
+                    color: $borderGray;
                 }
                 .navigationItemStyle:hover{
-                    color: black;
+                    color: $textBlack;
                     cursor: pointer;
                 }
             }
@@ -97,10 +97,10 @@
 .footer{
     padding-top: 50px;
     padding-bottom: 50px;
-    color: white;
+    color: $white;
     position: relative;
     margin-top: 50px;
-    background-color: gray;
+    background-color: $textGray;
     font-family: Tahoma;
     
     @include small-screen{
@@ -154,11 +154,11 @@
             }
             
             .socialIconStyle{
-                color: white; 
+                color: $white; 
             }
             
             .socialIconStyle:hover{
-                color: black;
+                color: $textBlack;
                 cursor: pointer;
             }
         }

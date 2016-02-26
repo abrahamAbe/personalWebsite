@@ -14,7 +14,7 @@
         .resumeSectionTitle{
             font-size: 21px;
             font-weight: bold;
-            color: black;
+            color: $textBlack;
             margin-bottom: 20px;
             
             @include small-screen{
@@ -23,7 +23,7 @@
         }
         .resumeSectionContent{
             padding-left: 5px;
-            color: #666666;
+            color: $textGray;
             font-size: 15px;
             
             @include small-screen{
@@ -47,7 +47,7 @@
                 .whiteBoldText{
                     font-weight: bold;
                     margin-bottom: 3px;
-                    color: black;
+                    color: $textBlack;
                 }
                 .descriptionContent{
                     margin-bottom: 7px;
@@ -59,10 +59,10 @@
                     }
                 }
             }
-            .contactSectionLeft{
+            .infoSectionLeft{
                 width: 50%;
             }
-            .contactSectionRight{
+            .infoSectionRight{
                 width: 48%
             }
             .resumeSectionLeft{
