@@ -25,7 +25,39 @@ export class ProjectsComponent implements OnInit {
     
     ngOnInit() {
         
-        var self = this;
+        var self = this,
+            imagesArray = [
+                './assets/projectImages/events.png',
+                './assets/projectImages/eventsDescription.png',
+                './assets/projectImages/landesk.png',
+                './assets/projectImages/landeskDescription.png',
+                './assets/projectImages/mycreepscore.png',
+                './assets/projectImages/myCreepScoreDescription.png',
+                './assets/projectImages/ucmdb.png',
+                './assets/projectImages/ucmdbDescription.png'
+            ];
+        
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+                        // remove image from the array once it's loaded
+                        // for memory consumption reasons
+                        list.splice(index, 1);
+                    }
+                }
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+
+        preloadImages(imagesArray);
         
         this.getProjects();
         this.getComponentStatus();

@@ -8,7 +8,7 @@ export var PROJECTS: Project[]= [
     },
     {
         name: 'Landesk',
-        description: 'A mobile security application that manages smart devices.'  ,
+        description: 'A mobile security application that manages smart devices.',
         imgName: 'landesk.png'
     },
     {
