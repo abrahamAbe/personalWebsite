@@ -7,8 +7,14 @@
 .projectsContent{
     color: $textBlack;
     
+    padding-top: 15px;
+    
     @include small-screen{
         padding-bottom: 20px;
+    }
+    
+    @include medium-screen{
+        padding-top: 0px !important;
     }
     
     .appLinkStyle{
@@ -103,7 +109,6 @@
         text-align: center;
         padding-bottom: 40px;
         vertical-align: top;
-        cursor: pointer;
         
         @media(max-width: 845px){
             margin-top: 50px;   
@@ -118,6 +123,7 @@
         .projectImg{
             height: 170px;
             width: 170px;
+            cursor: pointer;
             
             @include medium-screen{
                 height: 220px;

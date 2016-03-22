@@ -450,6 +450,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 7, ../sass/scssSheets/_projects.scss */
 .projectsContent {
   color: black;
+  padding-top: 15px;
 }
 @media screen and (max-width: 768px) {
   /* line 7, ../sass/scssSheets/_projects.scss */
@@ -457,68 +458,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 20px;
   }
 }
-/* line 14, ../sass/scssSheets/_projects.scss */
+@media screen and (max-width: 838px) {
+  /* line 7, ../sass/scssSheets/_projects.scss */
+  .projectsContent {
+    padding-top: 0px !important;
+  }
+}
+/* line 20, ../sass/scssSheets/_projects.scss */
 .projectsContent .appLinkStyle {
   font-weight: bold;
   color: black !important;
   text-decoration: none !important;
 }
-/* line 20, ../sass/scssSheets/_projects.scss */
+/* line 26, ../sass/scssSheets/_projects.scss */
 .projectsContent .appLinkStyle:hover {
   cursor: pointer;
 }
-/* line 24, ../sass/scssSheets/_projects.scss */
+/* line 30, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper {
   width: 100%;
   margin-bottom: 60px;
   display: none;
 }
 @media screen and (max-width: 838px) {
-  /* line 24, ../sass/scssSheets/_projects.scss */
+  /* line 30, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper {
     margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 24, ../sass/scssSheets/_projects.scss */
+  /* line 30, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper {
     padding: 40px 0px 0px 0px;
   }
 }
-/* line 37, ../sass/scssSheets/_projects.scss */
+/* line 43, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper .projectDescriptionTitle {
   margin-bottom: 30px;
 }
-/* line 41, ../sass/scssSheets/_projects.scss */
+/* line 47, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper .descriptionImgContainer {
   display: inline-block;
   height: 500px;
   width: 49%;
 }
 @media screen and (max-width: 500px) {
-  /* line 41, ../sass/scssSheets/_projects.scss */
+  /* line 47, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .descriptionImgContainer {
     width: 100%;
   }
 }
-/* line 50, ../sass/scssSheets/_projects.scss */
+/* line 56, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper .descriptionImgContainer img {
   height: 100%;
   width: 100%;
 }
 @media screen and (max-width: 838px) {
-  /* line 50, ../sass/scssSheets/_projects.scss */
+  /* line 56, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .descriptionImgContainer img {
     width: 80%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 50, ../sass/scssSheets/_projects.scss */
+  /* line 56, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .descriptionImgContainer img {
     width: 100%;
   }
 }
-/* line 64, ../sass/scssSheets/_projects.scss */
+/* line 70, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper .projectDescriptionContent {
   vertical-align: top;
   padding-left: 20px;
@@ -528,7 +535,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 15px;
 }
 @media screen and (max-width: 838px) {
-  /* line 64, ../sass/scssSheets/_projects.scss */
+  /* line 70, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .projectDescriptionContent {
     display: block;
     padding-left: 0px;
@@ -539,73 +546,73 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 64, ../sass/scssSheets/_projects.scss */
+  /* line 70, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .projectDescriptionContent {
     width: 100%;
   }
 }
-/* line 85, ../sass/scssSheets/_projects.scss */
+/* line 91, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectsContentWrapper .projectDescriptionContent .projectDescriptionParagraph {
   line-height: 19px;
   text-align: left;
 }
 @media screen and (max-width: 838px) {
-  /* line 91, ../sass/scssSheets/_projects.scss */
+  /* line 97, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectsContentWrapper .responsiveBlocks {
     display: block;
     text-align: center;
     width: 100%;
   }
 }
-/* line 100, ../sass/scssSheets/_projects.scss */
+/* line 106, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection {
   display: inline-block;
   width: 33%;
   text-align: center;
   padding-bottom: 40px;
   vertical-align: top;
-  cursor: pointer;
 }
 @media (max-width: 845px) {
-  /* line 100, ../sass/scssSheets/_projects.scss */
+  /* line 106, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection {
     margin-top: 50px;
   }
 }
 @media screen and (max-width: 838px) {
-  /* line 100, ../sass/scssSheets/_projects.scss */
+  /* line 106, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection {
     margin-bottom: 40px;
     display: block;
     width: 100%;
   }
 }
-/* line 118, ../sass/scssSheets/_projects.scss */
+/* line 123, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectImg {
   height: 170px;
   width: 170px;
+  cursor: pointer;
 }
 @media screen and (max-width: 838px) {
-  /* line 118, ../sass/scssSheets/_projects.scss */
+  /* line 123, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectImg {
     height: 220px;
     width: 50%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 118, ../sass/scssSheets/_projects.scss */
+  /* line 123, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectImg {
     width: 100%;
   }
 }
-/* line 132, ../sass/scssSheets/_projects.scss */
+/* line 138, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectName {
   color: black;
   font-weight: bold;
   padding-top: 12px;
   text-decoration: none;
 }
-/* line 139, ../sass/scssSheets/_projects.scss */
+/* line 145, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription {
   width: 65%;
   margin: auto;
@@ -615,18 +622,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #666666;
 }
 @media screen and (max-width: 768px) {
-  /* line 139, ../sass/scssSheets/_projects.scss */
+  /* line 145, ../sass/scssSheets/_projects.scss */
   .projectsContent .projectSection .projectDescription {
     width: 100%;
   }
 }
-/* line 151, ../sass/scssSheets/_projects.scss */
+/* line 157, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription .descriptionLink {
   font-weight: bold;
   text-decoration: none;
   color: black !important;
 }
-/* line 156, ../sass/scssSheets/_projects.scss */
+/* line 162, ../sass/scssSheets/_projects.scss */
 .projectsContent .projectSection .projectDescription .descriptionLink:hover {
   cursor: pointer;
 }
